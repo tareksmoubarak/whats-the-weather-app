@@ -14,6 +14,7 @@
 		2B47A051215E98DE008CBAEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B47A04F215E98DE008CBAEA /* LaunchScreen.storyboard */; };
 		2B47A05C215E98DE008CBAEA /* What_s_The_WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B47A05B215E98DE008CBAEA /* What_s_The_WeatherTests.swift */; };
 		2B47A067215E98DE008CBAEA /* What_s_The_WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B47A066215E98DE008CBAEA /* What_s_The_WeatherUITests.swift */; };
+		2B47A075215E99E7008CBAEA /* autumn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B47A074215E99E7008CBAEA /* autumn.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2B47A062215E98DE008CBAEA /* What's The WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "What's The WeatherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B47A066215E98DE008CBAEA /* What_s_The_WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_s_The_WeatherUITests.swift; sourceTree = "<group>"; };
 		2B47A068215E98DE008CBAEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B47A074215E99E7008CBAEA /* autumn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = autumn.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				2B47A048215E98DD008CBAEA /* ViewController.swift */,
 				2B47A04A215E98DD008CBAEA /* Main.storyboard */,
 				2B47A04D215E98DE008CBAEA /* Assets.xcassets */,
+				2B47A074215E99E7008CBAEA /* autumn.jpg */,
 				2B47A04F215E98DE008CBAEA /* LaunchScreen.storyboard */,
 				2B47A052215E98DE008CBAEA /* Info.plist */,
 			);
@@ -232,6 +235,7 @@
 				2B47A051215E98DE008CBAEA /* LaunchScreen.storyboard in Resources */,
 				2B47A04E215E98DE008CBAEA /* Assets.xcassets in Resources */,
 				2B47A04C215E98DD008CBAEA /* Main.storyboard in Resources */,
+				2B47A075215E99E7008CBAEA /* autumn.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

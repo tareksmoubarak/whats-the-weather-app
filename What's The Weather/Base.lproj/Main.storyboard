@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,111 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="What_s_The_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="autumn.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="V3Z-bF-UJj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkT-NP-q4I">
+                                <rect key="frame" x="64" y="416" width="247" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the weather ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOW-D5-cTz">
+                                <rect key="frame" x="43.5" y="70" width="288" height="32.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your city:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82O-Xm-cZb">
+                                <rect key="frame" x="18" y="287" width="117" height="23"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. London, Beirut, San Francisco" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aEX-Rb-6Uq">
+                                <rect key="frame" x="18" y="318.5" width="339" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="lrq-ut-mNl"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNK-fT-cNd">
+                                <rect key="frame" x="18" y="356" width="339" height="35"/>
+                                <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="Tell me">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ju0-4b-5RD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="df3-5W-Moh">
+                                <rect key="frame" x="64" y="424" width="247" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="8mW-6f-4NA">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                                <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IkT-NP-q4I" secondAttribute="trailing" constant="64" id="1rA-6J-Dgq"/>
+                            <constraint firstItem="8mW-6f-4NA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5iq-YG-Um1"/>
+                            <constraint firstItem="aEX-Rb-6Uq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="6lh-LA-zYJ"/>
+                            <constraint firstItem="8mW-6f-4NA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CfL-lo-RiI"/>
+                            <constraint firstItem="aEX-Rb-6Uq" firstAttribute="top" secondItem="82O-Xm-cZb" secondAttribute="bottom" constant="8.5" id="Czv-8y-sys"/>
+                            <constraint firstItem="GOW-D5-cTz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="EOF-sE-xds"/>
+                            <constraint firstItem="IkT-NP-q4I" firstAttribute="top" secondItem="QNK-fT-cNd" secondAttribute="bottom" constant="25" id="FJm-jj-0XR"/>
+                            <constraint firstItem="aEX-Rb-6Uq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IG1-c4-kAh"/>
+                            <constraint firstItem="V3Z-bF-UJj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ies-Gg-0Xd"/>
+                            <constraint firstItem="aEX-Rb-6Uq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IyV-b6-XHy"/>
+                            <constraint firstItem="V3Z-bF-UJj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Myh-Cj-Ppt"/>
+                            <constraint firstItem="df3-5W-Moh" firstAttribute="top" secondItem="IkT-NP-q4I" secondAttribute="bottom" constant="8" id="T5e-sD-N62"/>
+                            <constraint firstItem="82O-Xm-cZb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="UFV-o2-4vW"/>
+                            <constraint firstItem="QNK-fT-cNd" firstAttribute="top" secondItem="aEX-Rb-6Uq" secondAttribute="bottom" constant="7.5" id="Uoe-tk-CR0"/>
+                            <constraint firstItem="QNK-fT-cNd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W64-lf-V53"/>
+                            <constraint firstItem="QNK-fT-cNd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="XVg-EY-KEN"/>
+                            <constraint firstItem="V3Z-bF-UJj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aJo-H3-bQk"/>
+                            <constraint firstItem="V3Z-bF-UJj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bQb-ct-V5N"/>
+                            <constraint firstItem="82O-Xm-cZb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="cd8-s7-cdC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QNK-fT-cNd" secondAttribute="trailing" constant="18" id="dCG-Tg-92r"/>
+                            <constraint firstItem="GOW-D5-cTz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dIe-du-eAs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="df3-5W-Moh" secondAttribute="trailing" constant="64" id="eAG-VL-BpA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aEX-Rb-6Uq" secondAttribute="trailing" constant="18" id="f3d-0i-kcn"/>
+                            <constraint firstItem="V3Z-bF-UJj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gS4-Ug-fTG"/>
+                            <constraint firstItem="V3Z-bF-UJj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jCz-S6-bm3"/>
+                            <constraint firstItem="V3Z-bF-UJj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="siJ-A1-m9Z"/>
+                            <constraint firstItem="V3Z-bF-UJj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="slN-fB-OuZ"/>
+                            <constraint firstItem="df3-5W-Moh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="wth-l5-lF7"/>
+                            <constraint firstItem="IkT-NP-q4I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="xFD-HF-3vf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="df3-5W-Moh" secondAttribute="trailing" constant="64" id="yYT-K8-3DU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="activityView" destination="8mW-6f-4NA" id="PfL-Xo-AxZ"/>
+                        <outlet property="countryLbl" destination="IkT-NP-q4I" id="HOH-Wa-6x3"/>
+                        <outlet property="resultsLbl" destination="df3-5W-Moh" id="UAd-hx-Opt"/>
+                        <outlet property="userInput" destination="aEX-Rb-6Uq" id="0xh-rp-SS5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="autumn.jpg" width="2000" height="3000"/>
+    </resources>
 </document>
